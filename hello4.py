@@ -35,7 +35,7 @@ def translate_to_english(text):
     translated_text = translator.translate(text, src='auto', dest='en').text
     return translated_text
 
-def generator(prompt, save_path="./", authorization_token="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"):
+def generator(prompt, save_path="./", authorization_token="ENTER YOUR HUGGING FACE TOKEN"):
     if authorization_token !=None and len(prompt)>=5:
         API_URL = "https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2-1"
         b = requests.post(API_URL,
